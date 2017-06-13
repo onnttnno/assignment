@@ -2,7 +2,10 @@
   "name": "calculated",
   "version": "0.0.1",
   "description": "calculated",
-  "main": "index.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
   "dependencies": {
     "angular": "^1.6.4",
     "bower": "^1.8.0",
