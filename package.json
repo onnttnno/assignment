@@ -1,0 +1,16 @@
+{
+  "name": "calculations",
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "^4.15.3",
+    "gulp": "latest"
+  },
+  "description": "busic web app .Dev by Mean stack",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ritthirong Phoomanee",
+  "license": "ISC"
+}
