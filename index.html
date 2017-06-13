@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="todoCtrl">
+
+<h2>Calculatest</h2>
+
+
+    <input type="number" ng-model="input1" size="50000" placeholder="Add Number">
+    <input type="number" ng-model="input2" size="50000" placeholder="Add Number">
+    <form ng-submit="plus()">
+      <input type="submit" value="+">
+    </form>
+    <form ng-submit="minus()">
+      <input type="submit" value="-">
+    </form>
+    <form ng-submit="multi()">
+      <input type="submit" value="*">
+    </form>
+    <form ng-submit="divide()">
+      <input type="submit" value="/">
+    </form>
+
+
+<br>
+
+<p ng-bind="todoText"></p>
+
+
+
+
+<!-- script for function-->
+<script>
+var app = angular.module('myApp', []);
+app.controller('todoCtrl', function($scope) {
+    $scope.todoList = [{todoText:'Clean House', done:false}];
+    $scope.input1=0;
+    $scope.input2=0;
+
+    $scope.plus = function() {
+        $scope.todoList.push({todoText:$scope.input1+$scope.input2, done:false});
+        $scope.todoText=$scope.input1+$scope.input2;
+        $scope.todoInput1 = 0;
+        $scope.todoInput2 = 0;
+    };
+
+    $scope.minus = function() {
+        $scope.todoList.push({todoText:$scope.input1+$scope.input2, done:false});
+        $scope.todoText=$scope.input1-$scope.input2;
+        $scope.todoInput1 = 0;
+        $scope.todoInput2 = 0;
+    };
+    $scope.multi = function() {
+        $scope.todoList.push({todoText:$scope.input1+$scope.input2, done:false});
+        $scope.todoText=$scope.input1*$scope.input2;
+        $scope.todoInput1 = 0;
+        $scope.todoInput2 = 0;
+    };
+    $scope.divide = function() {
+        $scope.todoList.push({todoText:$scope.input1+$scope.input2, done:false});
+        if($scope.input2 == 0){
+            $scope.todoText="Error !! number2 must not be 0"
+
+        }
+        else{
+          $scope.todoText=$scope.input1/$scope.input2;
+        }
+        $scope.todoInput1 = 0;
+        $scope.todoInput2 = 0;
+    };
+
+
+});
+</script>
+
+</body>
+</html>

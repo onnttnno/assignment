@@ -1,7 +1,8 @@
 <!doctype html>
-<html ng-app="calculated">
+<html >
   <head>
-    <script src="C:\Users\U6062692\Assignment\assignment\node_modules\angular\angular.min.js"></script>
+  <!--  <script src="C:\Users\U6062692\Assignment\assignment\node_modules\angular\angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -14,7 +15,7 @@
   </head>
 
 
-  <body>
+  <body ng-app="calculated" ng-controller="calculateionController">
     <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
@@ -23,34 +24,33 @@
         <li ><a href="#section1"></a></li>
         <li><a href="#section2"></a></li>
         <li><a href="#section3"></a></li>
-        <li><a href="#section3"></a></li>
       </ul><br>
 
     </div>
 
     <div class="col-sm-9">
         <!-- Input from   have 2 input fill and 4 operation button -->
-        <form>
+        <form >
 
             <div class="form-group">
               <form class="form-inline">
                   <div class="form-group">
                     <label for="Input1">Number 1</label>
-                    <input type="number" class="form-control" id="Input1" placeholder="Only number">
+                    <input type="number" class="form-control" id="Input1" placeholder="Only number" ng-model="number1">
                   </div>
                   <div class="form-group">
-                    <label for="Input2">Number 1</label>
-                    <input type="number" class="form-control" id="Input2" placeholder="Only number">
+                    <label for="Input2">Number 2</label>
+                    <input type="number" class="form-control" id="Input2" placeholder="Only number" ng-model="number2">
                   </div>
-                  <button type="submit" class="btn btn-default col-md-2 col-md-offset-5">Solve</button>
+
                 </form>
                 <br><br>
                 <form class="form mt-3">
                   <form class="form-inline">
-                    <input class="btn btn-default" type="button" value="+">
-                    <input class="btn btn-default" type="button" value="-">
-                    <input class="btn btn-default" type="button" value="*">
-                    <input class="btn btn-default" type="button" value="/">
+                    <input class="btn btn-default" type="button" value="+" ng-click="operates('+')">
+                    <input class="btn btn-default" type="button" value="-" ng-click="operates('-')">
+                    <input class="btn btn-default" type="button" value="*" ng-click="operates('*')">
+                    <input class="btn btn-default" type="button" value="/" ng-click="operates('/')">
                   </form>
                 </form>
 
@@ -58,14 +58,15 @@
 
           </form>
           <!-- Output from have only 1 fill -->
-          <form>
-            <input class="form-control" id="disabledInput" type="number" placeholder="Answer" disabled>
-          </form>
+
+            <h2 ng-bind="Result"></h2>
+          
   </div>
 </div>
 
 <footer class="container-fluid">
-
+  <p>Name: <input type="text" ng-model="name"></p>
+    <p ng-bind="name"></p>
 </footer>
 
   </body>
