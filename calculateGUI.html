@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="calculated">
+  <head>
+    <script src="C:\Users\U6062692\Assignment\assignment\node_modules\angular\angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </head>
+
+
+  <body>
+    <div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>History</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li ><a href="#section1"></a></li>
+        <li><a href="#section2"></a></li>
+        <li><a href="#section3"></a></li>
+        <li><a href="#section3"></a></li>
+      </ul><br>
+
+    </div>
+
+    <div class="col-sm-9">
+        <!-- Input from   have 2 input fill and 4 operation button -->
+        <form>
+
+            <div class="form-group">
+              <form class="form-inline">
+                  <div class="form-group">
+                    <label for="Input1">Number 1</label>
+                    <input type="number" class="form-control" id="Input1" placeholder="Only number">
+                  </div>
+                  <div class="form-group">
+                    <label for="Input2">Number 1</label>
+                    <input type="number" class="form-control" id="Input2" placeholder="Only number">
+                  </div>
+                  <button type="submit" class="btn btn-default col-md-2 col-md-offset-5">Solve</button>
+                </form>
+                <br><br>
+                <form class="form mt-3">
+                  <form class="form-inline">
+                    <input class="btn btn-default" type="button" value="+">
+                    <input class="btn btn-default" type="button" value="-">
+                    <input class="btn btn-default" type="button" value="*">
+                    <input class="btn btn-default" type="button" value="/">
+                  </form>
+                </form>
+
+              </div>
+
+          </form>
+          <!-- Output from have only 1 fill -->
+          <form>
+            <input class="form-control" id="disabledInput" type="number" placeholder="Answer" disabled>
+          </form>
+  </div>
+</div>
+
+<footer class="container-fluid">
+
+</footer>
+
+  </body>
+
+
+
+</html>
